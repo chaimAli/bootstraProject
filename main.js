@@ -9,7 +9,7 @@ function changeHighScore() {
     var score = Math.floor(counter / 100);
     if (score > highestScore) {
         highestScore = score;
-        // document.getElementById("higestScore").innerText = highestScore;
+        document.getElementById("higestScore").innerText = highestScore;
     }
 }
 
@@ -29,8 +29,7 @@ function jump() {
 
 
 $(".game").click(jump);
-let val = localStorage.getItem('score');
-console.log(val);
+
 var checkDead = setInterval(function() {
     let samiraTop = parseInt(window.getComputedStyle(samira).getPropertyValue("top"));
     let obstacle1Left = parseInt(window.getComputedStyle(obstacle1).getPropertyValue("left"));
@@ -51,8 +50,6 @@ var checkDead = setInterval(function() {
     } else {
         counter++;
         document.getElementById("scoreSpan").innerHTML = Math.floor(counter / 100);
-        localStorage.setItem('score', Math.floor(counter / 100));
-
 
     }
 }, 10);

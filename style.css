@@ -132,14 +132,21 @@ header {
     /* #7dbadb; day mode */
     text-align: center;
     padding: 1.5em 1em 1em 1em;
-    /*  width: 70vw;*/
     position: relative;
     overflow-x: hidden;
-    /* margin-left: 204px;*/
+    display: flex;
+    justify-content: space-between;
 }
 
 header #logo h1 {
     color: #fff;
+    text-decoration: none;
+    /* text-transform: uppercase;*/
+    letter-spacing: .05em;
+}
+
+header #logo2 h3 {
+    color: #a69ca6;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .05em;
