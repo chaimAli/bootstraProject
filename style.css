@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /*nightmode*/
+    background-image: linear-gradient(to top, white 0%, #0f0a4a 100%);
+    /*daymode*/
+    /*  background-image: linear-gradient(to top, #FFBAC3 0%, #88e3fc 100%);*/
+    background-repeat: repeat-x;
+}
+
+.game {
+    height: 80vh;
+    width: 70vw;
+    margin: auto;
+    background-image: url("/images/pic1.png");
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);
+}
+
+
+/* CARACTERES */
+
+#samira {
+    height: 50px;
+    width: 20px;
+    position: relative;
+    top: 420px;
+    margin-left: 150px;
+}
+
+#obstacle1 {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 400px;
+    left: 1072.8px;
+    animation: run 5s infinite linear;
+    background-size: cover;
+}
+
+#obstacle2 {
+    height: 40px;
+    width: 20px;
+    position: relative;
+    top: 360px;
+    left: 952.8px;
+    animation: run 8s infinite linear;
+}
+
+#obstacle3 {
+    height: 60px;
+    width: 20px;
+    position: relative;
+    top: 300px;
+    left: 872.8px;
+    animation: run 11s infinite linear;
+}
+
+#students {
+    height: 150px;
+    width: 90px;
+    position: relative;
+    top: 220px;
+    margin-left: 5px;
+}
+
+#cactus {
+    height: 90px;
+    width: 50px;
+}
+
+#std {
+    width: 100px;
+    height: 130px;
+}
+
+#cat {
+    width: 60px;
+    height: 100px;
+}
+
+#spike {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* ANIMATION*/
+
+.execute {
+    animation: jump 650ms;
+}
+
+@keyframes shake {
+    from {
+        top: 220px;
+    }
+    to {
+        top: 210px;
+    }
+}
+
+@keyframes run {
+    0% {
+        left: 1072.8px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes jump {
+    0% {
+        top: 420px;
+    }
+    30% {
+        top: 270px;
+    }
+    70% {
+        top: 270px;
+    }
+    100% {
+        top: 440px;
+    }
+}
+
+
+/* #CLEARFIX */
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* #HEADER */
+
+header {
+    background-color: #0e0a40;
+    /* #7dbadb; day mode */
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+header #logo h1 {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: .05em;
+}
+
+header #logo2 h5 {
+    color: #e9d9e9;
+    text-decoration: none;
+    letter-spacing: .05em;
+}
+
+
+/* #NAVIGATION */
+
+#mainnav {
+    background: #0e0a40;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+#mainnav #menu {
+    display: none;
+    padding: .8em 1.5em;
+    cursor: pointer;
+}
+
+#mainnav ul {
+    display: block;
+    margin: 0;
+    text-align: center;
+}
+
+#mainnav ul li {
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+#mainnav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: .9em 1.5em .8em 1.5em;
+}
+
+#mainnav ul li button {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: .9em 1.5em .8em 1.5em;
+    border: none;
+    cursor: pointer;
+}
+
+#mainnav ul li a:hover {
+    color: #000;
+    background: #aaa;
+}
+
+.content {
+    padding: 1.5em;
+}
+
+
+/* MEDIA QUERIES*/
+
+
+/* Tablet (Between 768px - 992px)*/
+
+@media all and (min-width: 768px) and (max-width: 992px) {}
+
+
+/* MOBILE (Smaller than 768px)*/
+
+@media all and (max-width: 767px) {
+    #mainnav #menu {
+        display: block;
+    }
+    #mainnav ul {
+        display: none;
+        background: #666;
+        padding: 1em;
+        text-align: left;
+    }
+    #mainnav ul li {
+        display: block;
+    }
+    #mainnav ul li a {
+        display: block;
+        padding: .75em 1.5em .5em 1.5em;
+    }
+}
+
+p {
+    color: black;
+}
